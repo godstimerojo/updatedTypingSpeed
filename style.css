@@ -1,0 +1,281 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+  font-family: Arial, sans-serif;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  color: white;
+  padding: 20px 50px;
+}
+
+.typing-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.speed-test{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.speed-test img{
+  width: 32px;
+  height: 32px;
+}
+
+.speed-test h2{
+  font-size: 28px;
+}
+
+.main-heading > p{
+  margin-top: 5px;
+  color: rgb(170, 170, 170);
+}
+
+.best{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+}
+
+#passage{
+  padding-top: 40px;
+  color: rgb(153, 150, 150);
+  font-size: 35px;
+  line-height: 1.4;
+}
+
+
+.stats{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.stats p{
+  color: rgb(176, 175, 175);
+  font-size: 18px;
+}
+
+.stats span{
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#accuracy {
+  color: rgb(215, 98, 98);
+}
+
+#time {
+color: rgb(255, 229, 138);
+}
+
+.control{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(54, 53, 53);
+}
+
+
+
+.mode{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button{
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 2px solid gray;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.level,
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.level p,
+.timer p{
+  color: rgb(176, 174, 174);
+  font-size: 16px;
+}
+
+.char {
+  position: relative;
+}
+
+.char.correct {
+  color: green;
+}
+
+.char.wrong {
+  color: red;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 5px;
+}
+
+.char.current {
+  background: rgba(255, 254, 254, 0.3);
+  border-radius: 4px;
+}
+
+.typing-input {
+  position: fixed;
+  left: -9999px;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+  resize: none;
+}
+
+.result{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 30px;
+  color: rgb(181, 213, 133);
+}
+
+.restart{
+  text-align: center;
+  margin-top: 30px;
+}
+
+.restart button{
+  background-color: rgb(38, 38, 38);
+  color: white;
+  padding: 14px 18px;
+  border-radius: 15px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.restart button:hover{
+  background-color: rgb(111, 111, 205);
+}
+
+.restart button:active{
+  background-color: rgb(74, 74, 224);
+}
+
+@media screen and (max-width: 600px) {
+  .container{
+    padding: 18px 16px 28px;
+    height: 100vh;
+    overflow: visible;
+  }
+
+  .speed-test h2,
+  .main-heading > p{
+    display: none ;
+  }
+
+  .speed-test img{
+    width: 38px;
+    height: 38px;
+  }
+
+  .best{
+    font-size: 16px;
+  }
+
+  .control{
+    display: block;
+    margin-top: 32px;
+    padding-bottom: 16px;
+  }
+
+  .stats{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    /* display: flex;
+    justify-content: space-between; */
+    text-align: center;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .stats p{
+    font-size: 16px;
+  }
+
+  .stats span{
+    display: block;
+    margin-top: 6px;
+    font-size: 24px;
+  }
+
+  .mode{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .mode > p{
+    display: none;
+  }
+
+  .level,
+  .timer{
+    display: block;
+  }
+
+   .level p,
+  .timer p{
+    display: none;
+  }
+
+   .level button,
+  .timer button{
+     display: none;
+  }
+
+  #hard,
+  #timed{
+    display: block;
+    width: 100%;
+    height: 32px;
+    font-size: 15px;
+  }
+
+  #passage{
+    height: calc(100vh - 300px);
+    overflow-y: auto;
+    padding-top: 32px;
+    padding-right: 4px;
+    font-size: 30px;
+    line-height: 1.35;
+  }
+
+  hr{
+    margin: 22px 0;
+    border: 1px solid #333;
+  }
+
+  
+}

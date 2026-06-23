@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Speed Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="container">
+  <div class="main-heading">
+    <div class="typing-head">
+      <div class="speed-test">
+        <img src="image.png" alt="">
+      <h2>Typing Speed Test</h2>
+      </div>
+      
+    <div class="best">
+          <span aria-hidden="true">🏆</span>
+          <span>Personal best: <strong id="bestWpm">0 WPM</strong></span>
+       </div>
+
+    </div>
+    <p>Type as fast as you can in 60 seconds</p>
+  </div>
+
+<div class="control">
+  <div class="stats">
+    <p>WPM: <span id="wpm">0</span></p>
+    <p>|</p>
+    <p>Accuracy: <span id="accuracy">0%</span></p>
+    <p>|</p>
+    <p>Time: <span id="time">60</span></p>
+  </div>
+
+  <div class="mode">
+    <div class="level">
+      <p>Difficulty:</p>
+    <button id="easy">Easy</button>
+    <button id="medium">Medium</button>
+    <button id="hard">Hard</button>
+    </div>
+     <p>|</p>
+    <div class="timer">
+      <p>Mode:</p>
+    <button id="timed">Timed(60s)</button>
+    <button>Passage</button>
+    </div> 
+  </div>
+</div>
+
+<div id="passage"></div>
+<textarea
+  id="typingInput"
+  class="typing-input"
+  autocapitalize="none"></textarea>
+
+  <div id="result" class="result" role="status" aria-live="polite"></div>
+
+  <hr>
+
+<div class="restart">
+  <button id="restartBtn">Restart Test</button>
+</div>
+
+  
+ </div>
+
+
+ 
+  <script src="script.js"></script>
+</body>
+</html>
